@@ -1,0 +1,59 @@
+<div class="signup-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 main">
+                <div class="text-center img-block">
+                    <img src="images/logo1.png"  class="user-avatar img-circle img-responsive" />
+                    <h4>Sign Up</h4>
+                </div>
+                <form role="form" class="bottom-75" ng-submit="submit()">
+                    <div class="table-form">
+                        <div class="form-groups">
+                            <div class="form-group">
+                                <label>Name:</label>
+                                <input type="text" required ng-model="username" class="form-control input-lg" id="" placeholder="Please Enter you name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="sel1">Role:</label>
+                                <select class="form-control" id="sel1" required>
+                                    <option value="">Choose</option>
+                                    <option>Developer</option>
+                                    <option>Tester</option>
+                                    <option>Manager</option>
+                                    <option>Trainee</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="sel1">Project:</label>
+                                <select class="form-control" id="sel1" required>
+                                    <option value="">Choose</option>
+                                    <option>CMM DBB</option>
+                                    <option>Oneup</option>
+                                    <option>Pro 1</option>
+                                    <option>Pro 2</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Password:</label>
+                                <input type="password" required ng-model="password" class="form-control input-lg" id="" placeholder="Please enter your password" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm Password:</label>
+                                <input type="password" required ng-model="confirmPassword" class="form-control input-lg" id="" placeholder="Please Re-enter your password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlFile1">Please give your identity</label>
+                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                            </div>
+                        </div>
+                        <div class="button-container text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Sign up</button>
+                            <button type="button" class="btn btn-secondary btn-lg" ng-click="cancel()">Cancel</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

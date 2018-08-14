@@ -1,0 +1,58 @@
+<div>
+	<div ng-include="'menu.html'"></div>
+	<snap-dragger></snap-dragger>
+	<snap-content snap-opt-tap-to-close="false">
+
+		<a href="" snap-toggle="left" ng-click="menuOpen = !menuOpen">
+			<span class="menutoggle">
+				<i ng-hide="menuOpen" class="fa fa-bars fa-2x" ></i>
+				<i ng-show="menuOpen" class="fa fa-times fa-2x" ></i>
+			</span>
+		</a>
+		
+		<div class="fr">
+		<h2 class="text-center">Team Dashboard</h2>
+			<h4>Hi <strong>{{loggedInUserName}}!</strong></h4>
+			<p>This is your team view. From here you can give up to (A) stars every (B) to your team members for a job well done. If you wish, you may also leave a short comment on what was amazing, why it was so helpful to you and, perhaps, some new skills they can pick up to improve.
+
+				To award stars, just click on the person’s picture.</p>
+		</div>
+
+		<div class="jumbotron">
+			<div class="col-sm-6 col-md-3" ng-repeat="profile in profiles" ng-click="select(profile)" data-toggle="modal" data-target="#myModal">
+				<div class="thumbnail" ng-class="{'active': isActive(profile)}" >
+					<img alt="100%x200" data-src="holder.js/100%x200" src="images/av1.png" data-holder-rendered="true" style="width: 50%; display: block;">
+					<div class="caption text-center">
+						<h3>{{profile.name}}</h3>
+						<p>{{profile.role}}</p>
+					</div>
+				</div>
+			</div>
+
+			<!--<div class=col-md-12 ng-if="itemSelected">
+				<div class="col-md-6">
+					<p>Please Give Rating to {{personName}}:</p>
+				</div>
+				<div class="col-md-6">
+					<div ng-repeat="rating in ratings">
+						<h2>{{rating.current}} /
+							{{rating.max}}</h2>
+						<div star-rating rating-value="rating.current" max="rating.max" on-rating-selected="getSelectedRating(rating)"></div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<p>Please Give Feedback to {{personName}}:</p>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<textarea class="form-control" rows="5" id="comment"></textarea>
+					</div>
+					<button type="button" class="btn btn-primary" ng-click="sendRate()">Send</button>
+				</div>
+			</div>-->
+		</div>
+
+	</snap-content>
+
+
+</div>
