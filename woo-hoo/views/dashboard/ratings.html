@@ -1,0 +1,30 @@
+<div class="modal-header">
+    <h3 class="modal-title text-center">Ratings</h3>
+</div>
+<div class="modal-body" style="overflow:hidden">
+<div class=col-md-12 >
+    <div class="col-md-6">
+        <p>Please Give Rating to {{itemData.name}}:</p>
+    </div>
+    <div class="col-md-6">
+        <div ng-repeat="rating in ratings">
+            <h2>{{rating.current}} /
+                {{rating.max}}</h2>
+            <div star-rating rating-value="rating.current" max="rating.max" on-rating-selected="getSelectedRating(rating)"></div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <p>Please Give Feedback to {{itemData.name}}:</p>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal-footer text-center">
+    <button type="button" class="btn btn-primary" ng-click="sendRate()">Submit</button>
+    <button class="btn btn-warning" type="button"
+            ng-click="close()">Cancel</button>
+</div>
